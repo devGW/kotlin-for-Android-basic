@@ -38,6 +38,11 @@ class MainActivity : AppCompatActivity() {
             }
             override fun onNothingSelected(p0: AdapterView<*>?) {}
         }
+
+        button.setOnClickListener {
+            textView.text = data1[spinner1.selectedItemPosition] + "\n" +
+                    data2[spinner1.selectedItemPosition]
+        }
     }
     inner class SpinnerListener : AdapterView.OnItemSelectedListener{
         override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
